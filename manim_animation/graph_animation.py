@@ -1,3 +1,24 @@
+"""
+Manim Animation for Function Dependency Graph Generation.
+
+This module creates an educational animation that demonstrates the concepts behind
+function dependency graph generation and graph theory principles. The animation
+covers three main sections:
+
+1. Graph Theory Preliminaries: Introduces basic concepts of vertices and edges
+   in the context of function call relationships.
+
+2. Graph Construction Algorithm: Shows the step-by-step process of identifying
+   functions and their call relationships to build a dependency graph.
+
+3. Graph Properties: Demonstrates important graph properties including cycles,
+   strongly connected components, and node degrees as they relate to function
+   dependency analysis.
+
+The animation serves as both an educational tool for understanding graph theory
+concepts and a demonstration of how function call graphs are constructed and analyzed.
+"""
+
 from manim import *
 
 class FunctionDependencyGraph(Scene):
