@@ -39,22 +39,22 @@ footer { text-align: center; color: var(--text-muted); font-size: 0.8rem; paddin
 <h1>Function Graph Generator</h1>
 <p>Documentation hub for AI agents and developers</p>
 </header>
-# Function Graph Generator
+<h1>Function Graph Generator</h1>
 
 Automatically generate function call graphs for Python code.
 
 `graph.py` is a Python script that analyzes Python source code and generates visual function call graphs showing dependencies between functions.
 
-## Features
+<h2>Features</h2>
 
 - Supports Python
 - Configurable graph generation
 - Interactive visualization with matplotlib
 - Unit tested with sample code cases
 
-## Usage
+<h2>Usage</h2>
 
-### 1. Prepare Source Code
+<h3>1. Prepare Source Code</h3>
 Create a file containing your Python source code. For example, you can combine multiple Python files into a single input file:
 
 ```bash
@@ -65,7 +65,7 @@ or
 cat ./src/*.py > input.txt
 ```
 
-### 2. Generate Call Graph
+<h3>2. Generate Call Graph</h3>
 Run the script:
 ```bash
 python3 graph.py
@@ -73,7 +73,7 @@ python3 graph.py
 
 A window will display the interactive graph. You can zoom, pan, and inspect nodes.
 
-## Configuration
+<h2>Configuration</h2>
 
 Modify the generator's configuration before generating the graph:
 ```python
@@ -90,14 +90,14 @@ generator.generate_call_graph("input.txt")
 | `allow_self_reference` | True    | Display edges for recursive calls                                              |
 | `allow_childless_funcs`| True    | Include functions that don't call other functions                              |
 
-## Testing
+<h2>Testing</h2>
 
 Unit tests verify function extraction and graph generation. Run tests with:
 ```bash
 python3 -m unittest test.py
 ```
 
-## Dependencies
+<h2>Dependencies</h2>
 
 - Python 3.6+
 - networkx
@@ -108,7 +108,7 @@ Install requirements:
 pip install --user networkx matplotlib
 ```
 
-## How It Works
+<h2>How It Works</h2>
 
 1. **Language Detection**: Checks the first 10 lines for the Python-specific pattern:
    - Python: `def` keywords at the beginning of a line (allowing for leading spaces).
@@ -119,13 +119,13 @@ pip install --user networkx matplotlib
 
 4. **Visualization**: Applies the spring layout algorithm and matplotlib for interactive display.
 
-## Notes
+<h2>Notes</h2>
 
 - For large codebases, consider splitting into modules. The script processes all input as a single file.
 - The spring layout's appearance can be adjusted in `create_and_visualize_graph()`.
 - Function detection uses basic pattern matching. Complex syntax may require parser improvements.
 
-## Example Output
+<h2>Example Output</h2>
 
 Interact with the graph to:
 - Drag nodes to rearrange the layout
