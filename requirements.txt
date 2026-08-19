@@ -1,0 +1,18 @@
+# Core (these pins require Python >= 3.11)
+networkx==3.6.1
+matplotlib==3.11.1
+pillow==12.3.0
+
+# Optional
+pyyaml==6.0.3
+pydot==4.0.1
+
+# Optional: manim_animation/graph_animation.py only
+manim==0.21.0
+
+# Dev
+pytest==9.1.1
+pytest-cov==7.1.0
+black==26.5.1
+flake8==7.3.0
+mypy==2.3.1

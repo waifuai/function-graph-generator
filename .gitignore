@@ -4,3 +4,9 @@ __pycache__/
 *.pyo
 *.pyd
 media
+
+# Dependency manifests are NOT generated output - keep them tracked
+!requirements.txt
+!requirements-dev.txt
+!requirements_full.txt
+!runtime.txt

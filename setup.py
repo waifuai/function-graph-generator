@@ -13,11 +13,6 @@ try:
 except FileNotFoundError:
     long_description = "A tool for analyzing and visualizing function call relationships in source code."
 
-# Read requirements from requirements.txt
-def read_requirements():
-    with open('requirements.txt', 'r') as f:
-        return [line.strip() for line in f if line.strip() and not line.startswith('#')]
-
 setup(
     name="function-graph-generator",
     version="2.0.0",
@@ -31,29 +26,33 @@ setup(
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
-        "License :: OSI Approved :: MIT-0 License",
+        "License :: OSI Approved :: MIT No Attribution License (MIT-0)",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
+        "Programming Language :: Python :: 3.14",
         "Topic :: Software Development :: Documentation",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    python_requires=">=3.7",
-    install_requires=read_requirements(),
+    python_requires=">=3.11",
+    install_requires=[
+        "networkx>=3.6",
+        "matplotlib>=3.11",
+        "pillow>=12.0",
+    ],
     extras_require={
         "dev": [
-            "pytest>=7.0.0",
-            "pytest-cov>=4.0.0",
-            "black>=22.0.0",
-            "flake8>=4.0.0",
-            "mypy>=1.0.0",
+            "pytest>=9.0.0",
+            "pytest-cov>=7.0.0",
+            "black>=26.0.0",
+            "flake8>=7.0.0",
+            "mypy>=2.0.0",
         ],
-        "yaml": ["pyyaml>=6.0"],
-        "dot": ["pydot>=1.4.0"],
+        "yaml": ["pyyaml>=6.0.3"],
+        "dot": ["pydot>=4.0.0"],
+        "animation": ["manim>=0.21.0"],
     },
     entry_points={
         "console_scripts": [
